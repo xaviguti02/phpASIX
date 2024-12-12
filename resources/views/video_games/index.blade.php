@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llibres</title>
+    <title>Videojocs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -104,17 +104,17 @@
 </head>
 <body>
 <header>
-    <h1>Demo ASIX</h1>
+    <h1>Videojocs</h1>
     <nav>
         <ul>
-            <li><a href="/home">Inici</a></li> <!-- Afegit l'enllaç a la pàgina d'inici -->
+            <li><a href="/home">Inici</a></li> <!-- Botó per anar a la pàgina d'inici -->
             <li><a href="/books">Llibres</a></li>
-            <li><a href="/video_games">Videojocs</a></li>
+            <li><a href="/video_games" class="active">Videojocs</a></li>
         </ul>
     </nav>
 </header>
 <main>
-    <a href="/books/create" class="create-button">Afegir un nou Llibre</a>
+    <a href="/video_games/create" class="create-button">Crear nou videojoc</a>
     <table>
         <thead>
         <tr>
@@ -125,14 +125,14 @@
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($books as $book): ?>
+        <?php foreach ($videoGames as $game): ?>
         <tr>
-            <td><?= $book->name ?></td>
-            <td><?= $book->author ?></td>
-            <td><?= $book->releaseYear ?></td>
+            <td><?= $game->name ?></td>
+            <td><?= $game->genre ?></td>
+            <td><?= $game->releaseYear ?></td>
             <td>
-                <a href="/books/edit/<?= $book->id ?>">Editar</a> |
-                <a href="/books/delete/<?= $book ->id ?>">Eliminar</a>
+                <a href="/video_games/edit/<?= $game->id ?>">Editar</a> |
+                <a href="/video_games/delete/<?= $game->id ?>">Eliminar</a>
             </td>
         </tr>
         <?php endforeach; ?>

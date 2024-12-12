@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Editar llibre - Demo ASIX</title>
+    <title>Editar videojoc - Demo ASIX</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -134,20 +134,20 @@
 </header>
 
 <main>
-    <h1>Editar llibre: <?= htmlspecialchars($book->name) ?></h1>
+    <h1>Editar videojoc: <?= htmlspecialchars($game->name) ?></h1>
     <div>
-        <form action="/books/edit/<?= $book->id ?>" method="POST">
+        <form method="POST">
             <div>
-                <label for="name">Títol del llibre:</label>
-                <input type="text" id="name" name="name" value="<?= htmlspecialchars($book->name) ?>" required>
+                <label for="name">Nom del videojoc:</label>
+                <input type="text" id="name" name="name" value="<?= htmlspecialchars($videoGame->name) ?>" required>
             </div>
             <div>
-                <label for="author">Autor:</label>
-                <input type="text" id="author" name="author" value="<?= htmlspecialchars($book->author) ?>" required>
+                <label for="genre">Gènere:</label>
+                <input type="text" id="genre" name="genre" value="<?= htmlspecialchars($videoGame->genre) ?>" required>
             </div>
             <div>
                 <label for="releaseYear">Any de llançament:</label>
-                <input type="number" id="releaseYear" name="releaseYear" value="<?= htmlspecialchars($book->releaseYear) ?>" required>
+                <input type="number" id="releaseYear" name="releaseYear" value="<?= htmlspecialchars($videoGame->releaseYear) ?>" required>
             </div>
             <button type="submit">Guardar canvis</button>
         </form>

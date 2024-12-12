@@ -28,3 +28,6 @@ App::bind('database', new Database(
 //enllacem instancia rutes
 App::bind('router', (new Route())->define($routes));
 
+
+// Altres configuracions necessàries
+require '../Core/helpers.php';

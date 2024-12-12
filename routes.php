@@ -8,10 +8,12 @@ return [
 
     '/books' => '../App/Controllers/BookController.php@index',
     '/books/create' => '../App/Controllers/BookController.php@create',
-    '/books/store' => '../App/Controllers/BookController.php@store',
     '/books/edit/{id}' => '../App/Controllers/BookController.php@edit',
-    '/books/update/{id}' => '../App/Controllers/BookController.php@update',
     '/books/delete/{id}' => '../App/Controllers/BookController.php@delete',
-    '/books/destroy/{id}' => '../App/Controllers/BookController.php@destroy',
-    '/books/confirm-delete/{id}' => '../App/Controllers/BookController.php@confirmDelete',
+
+    '/video_games' => '../App/Controllers/VideoGameController.php@index',
+    '/video_games/create' => '../App/Controllers/VideoGameController.php@create',
+    '/video_games/edit/{id}' => '../App/Controllers/VideoGameController.php@edit',
+    '/video_games/delete/{id}' => '../App/Controllers/VideoGameController.php@delete',
 ];
+
