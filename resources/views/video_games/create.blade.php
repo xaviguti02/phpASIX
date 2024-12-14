@@ -163,9 +163,18 @@
         <label for="releaseYear">Any de llançament:</label>
         <input type="number" id="releaseYear" name="releaseYear" required><br>
 
+        <!-- Nou camp: Preu -->
+        <label for="price">Preu (€):</label>
+        <input type="number" step="0.01" id="price" name="price" required><br>
+
+        <!-- Nou camp: Plataforma -->
+        <label for="platform">Plataforma:</label>
+        <input type="text" id="platform" name="platform" required><br>
+
         <button type="submit">Crear</button>
     </form>
 </div>
+
 
 <footer>
     <p>&copy; 2024 Demo ASIX. Tots els drets reservats.</p>

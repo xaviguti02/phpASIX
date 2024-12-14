@@ -16,12 +16,16 @@ class VideoGameController {
             $name = $_POST['name'];
             $genre = $_POST['genre'];
             $releaseYear = $_POST['releaseYear'];
+            $price = $_POST['price'];
+            $platform = $_POST['platform'];
 
             // Crea el videojoc i el desa
             $newVideoGame = new VideoGame([
                 'name' => $name,
                 'genre' => $genre,
-                'releaseYear' => $releaseYear
+                'releaseYear' => $releaseYear,
+                'price' => $price,
+                'platform' => $platform,
             ]);
             $newVideoGame->save();
 
@@ -49,6 +53,8 @@ class VideoGameController {
             $videoGame->name = $_POST['name'];
             $videoGame->genre = $_POST['genre'];
             $videoGame->releaseYear = $_POST['releaseYear'];
+            $videoGame->price = $_POST['price'];
+            $videoGame->platform = $_POST['platform'];
             $videoGame->save();  // Guarda els canvis al model
 
             // Redirigeix després de l'actualització
@@ -80,4 +86,3 @@ class VideoGameController {
         require '../resources/views/video_games/delete.blade.php';
     }
 }
-

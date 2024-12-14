@@ -12,6 +12,7 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            background-image: url('images/image.jpg');
         }
         header {
             background-color: #007BFF;
@@ -116,27 +117,27 @@
 <main>
     <a href="/video_games/create" class="create-button">Crear nou videojoc</a>
     <table>
-        <thead>
         <tr>
             <th>Nom</th>
             <th>Gènere</th>
-            <th>Any de Llançament</th>
+            <th>Plataforma</th>
+            <th>Any</th>
+            <th>Preu</th>
             <th>Accions</th>
         </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($videoGames as $game): ?>
+        <?php foreach ($videoGames as $videoGame): ?>
         <tr>
-            <td><?= $game->name ?></td>
-            <td><?= $game->genre ?></td>
-            <td><?= $game->releaseYear ?></td>
+            <td><?php echo $videoGame->name; ?></td>
+            <td><?php echo $videoGame->genre; ?></td>
+            <td><?php echo $videoGame->platform; ?></td>
+            <td><?php echo $videoGame->releaseYear; ?></td>
+            <td><?php echo $videoGame->price; ?>€</td>
             <td>
-                <a href="/video_games/edit/<?= $game->id ?>">Editar</a> |
-                <a href="/video_games/delete/<?= $game->id ?>">Eliminar</a>
+                <a href="/video_games/edit/<?php echo $videoGame->id; ?>">Editar</a> |
+                <a href="/video_games/delete/<?php echo $videoGame->id; ?>">Esborrar</a>
             </td>
         </tr>
         <?php endforeach; ?>
-        </tbody>
     </table>
 </main>
 <footer>

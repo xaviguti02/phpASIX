@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo ASIX</title>
+    <title>Projecte PHP ASIX</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,9 +12,11 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            background-image: url('images/image.jpg');
         }
+
         header {
-            background-color: #007BFF;
+            background-color: rgba(0, 123, 255, 0.8); /* Fons semitransparent per llegibilitat */
             color: #fff;
             padding: 20px 10px;
             text-align: center;
@@ -49,6 +51,11 @@
         main {
             padding: 20px;
             text-align: center;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.7); /* Fons semitransparent per al text */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
         footer {
             background-color: #333;
@@ -63,7 +70,7 @@
 </head>
 <body>
 <header>
-    <h1>Demo ASIX</h1>
+    <h1>Projecte PHP ASIX</h1>
     <nav>
         <ul>
             <li><a href="/home">Inici</a></li> <!-- Afegit l'enllaç a la pàgina d'inici -->
@@ -73,10 +80,12 @@
     </nav>
 </header>
 <main>
-    <p>Benvingut a la pàgina principal de la demo ASIX. Selecciona una secció del menú per començar.</p>
+    <p>Benvingut a la pàgina principal del meu projecte PHP ASIX. Selecciona una secció del menú per començar.</p>
+    <p>En aquest projecte trobaràs informació sobre llibres i videojocs, així com una guia completa per explorar més opcions.</p>
+    <p>Descobreix els recursos i gaudeix de l'experiència al màxim!</p>
 </main>
 <footer>
-    <p>&copy; 2024 Demo ASIX. Tots els drets reservats.</p>
+    <p>&copy; 2024 Projecte PHP ASIX. Tots els drets reservats.</p>
 </footer>
 </body>
 </html>

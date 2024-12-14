@@ -142,6 +142,14 @@
                 <input type="text" id="name" name="name" value="<?= htmlspecialchars($videoGame->name) ?>" required>
             </div>
             <div>
+                <label for="price">Preu:</label>
+                <input type="number" id="price" name="price" value="<?= htmlspecialchars($videoGame->price) ?>" step="0.01" required>
+            </div>
+            <div>
+                <label for="platform">Plataforma:</label>
+                <input type="text" id="platform" name="platform" value="<?= htmlspecialchars($videoGame->platform) ?>" required>
+            </div>
+            <div>
                 <label for="genre">Gènere:</label>
                 <input type="text" id="genre" name="genre" value="<?= htmlspecialchars($videoGame->genre) ?>" required>
             </div>

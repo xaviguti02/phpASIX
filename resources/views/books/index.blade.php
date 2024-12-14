@@ -12,6 +12,8 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            background-image: url('images/harrypotter.jpg');
+            background-size: cover;
         }
         header {
             background-color: #007BFF;
@@ -60,6 +62,8 @@
             padding: 10px;
             text-align: left;
             border: 1px solid #ddd;
+            background-color: #fff; /* Fons blanc per a les cel·les */
+            transition: background-color 0.3s;
         }
         th {
             background-color: #007BFF;
@@ -68,8 +72,8 @@
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        tr:hover {
-            background-color: #f1f1f1;
+        tr:hover td {
+            background-color: #e9e9e9; /* Fons més fosc quan el cursor passa per sobre */
         }
         a {
             color: #007BFF;
@@ -107,8 +111,8 @@
     <h1>Demo ASIX</h1>
     <nav>
         <ul>
-            <li><a href="/home">Inici</a></li> <!-- Afegit l'enllaç a la pàgina d'inici -->
-            <li><a href="/books">Llibres</a></li>
+            <li><a href="/home">Inici</a></li>
+            <li><a href="/books" class="active">Llibres</a></li>
             <li><a href="/video_games">Videojocs</a></li>
         </ul>
     </nav>
@@ -119,7 +123,7 @@
         <thead>
         <tr>
             <th>Nom</th>
-            <th>Gènere</th>
+            <th>Autor</th>
             <th>Any de Llançament</th>
             <th>Accions</th>
         </tr>
@@ -132,7 +136,7 @@
             <td><?= $book->releaseYear ?></td>
             <td>
                 <a href="/books/edit/<?= $book->id ?>">Editar</a> |
-                <a href="/books/delete/<?= $book ->id ?>">Eliminar</a>
+                <a href="/books/delete/<?= $book->id ?>">Eliminar</a>
             </td>
         </tr>
         <?php endforeach; ?>
