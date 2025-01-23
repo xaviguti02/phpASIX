@@ -150,7 +150,6 @@
         </ul>
     </nav>
 </header>
-
 <div class="container">
     <h1>Crear Nou Videojoc</h1>
     <form method="POST" action="/video_games/create">
@@ -174,8 +173,6 @@
         <button type="submit">Crear</button>
     </form>
 </div>
-
-
 <footer>
     <p>&copy; 2024 Demo ASIX. Tots els drets reservats.</p>
 </footer>

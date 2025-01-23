@@ -61,6 +61,8 @@
             padding: 10px;
             text-align: left;
             border: 1px solid #ddd;
+            background-color: #fff; /* Color de fons blanc */
+            transition: background-color 0.3s; /* Transició per a l'efecte hover */
         }
         th {
             background-color: #007BFF;
@@ -69,8 +71,8 @@
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        tr:hover {
-            background-color: #f1f1f1;
+        tr:hover td {
+            background-color: #f1f1f1; /* Fons més fosc quan el cursor està sobre la fila */
         }
         a {
             color: #007BFF;
